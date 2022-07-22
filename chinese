@@ -1,2 +1,0 @@
-<li class="{{ page.chinese }}"><a href="/Chinese" title="Chinese">中文</a></li>
-		<li><a href="/" title="Contact">Contact</a></li>
