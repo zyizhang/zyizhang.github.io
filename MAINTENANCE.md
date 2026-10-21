@@ -51,6 +51,8 @@ Google Search Console 使用「网址前缀」添加 `https://zyizhang.github.io
 
 当前 Google 验证文件为根目录下的 `google1ce0c4b82039fdff.html`，内容从你提供的文件原样复制。请保持文件名、内容及公开访问地址不变，不要删除，也不要将它移入 Jekyll 排除目录。
 
+首页 `<head>` 中同时保留了你提供的 `google-site-verification` 元标签，也可用于 HTML 标签验证。之后修改首页时请保留此标签。
+
 在 Google Scholar、ORCID、ETH 个人页、GitHub、LinkedIn 等资料中添加正式网址，可帮助访问者和搜索引擎发现主页。可以关注 `Zhenyi Zhang GNSS`、`Zhenyi Zhang ETH`、`张镇驿 GNSS` 等查询，但收录时间和排名由搜索引擎决定，不能保证即时或固定排名。
 
 旧版 `/cv/` 和 `/chinese/cv/` 已改为跳转至指定的无教学版 PDF，移除旧网页中的 GPA、Education 和 Teaching 信息。完整教学版 `cv/CV_Zhenyi.pdf` 仅留本地，已从 Git 提交和 Jekyll 构建中排除。其余旧页面保留，新主页使用页内导航。旧模板的统计脚本不在新主页加载。
