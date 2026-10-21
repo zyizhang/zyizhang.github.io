@@ -1,0 +1,8 @@
+permalink: /notes/:year/:month/:day/:title
+markdown: kramdown
+exclude:
+  - othermaterials
+  - scripts
+  - MAINTENANCE.md
+  - .tools
+  - cv/CV_Zhenyi.pdf

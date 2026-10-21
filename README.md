@@ -1,21 +1,42 @@
-zyizhang.github.io
-========
+﻿# Zhenyi Zhang - Personal Academic Website
 
-Personal academic website of Zhenyi Zhang, hosted at https://zyizhang.github.io/ with GitHub Pages.
+Live site: https://zyizhang.github.io/
 
-The homepage is a static HTML/CSS site. See [MAINTENANCE.md](MAINTENANCE.md) for editing and local preview instructions. Update publications, news and awards with `python scripts/update_publications.py`.
+A static academic homepage, published with GitHub Pages from the `master` branch. The active site has no Bootstrap, front-end package manager, or local Ruby dependency.
 
-Source data for public website content is maintained in `othermaterials/publications.json`, `othermaterials/news.json` and `othermaterials/awards.json`. Working notes, original CV text and temporary tools are kept local and excluded from Git.
+## Repository layout
 
-Legacy template content retains its original [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/deed.en_US). Publication figures and third-party brand icons retain their respective licenses; figure sources are linked on the page and icon attribution is in `assets/icons/`.
+- `index.html`: homepage, biography and research interests.
+- `assets/`: current CSS, pagination JavaScript, publication thumbnails and link icons.
+- `content/`: editable public publication, news and award data; original publication figures are in `content/source-images/`.
+- `cv/`: current public CV and its legacy URL redirect.
+- `img/snowboarding.jpg`: current profile photo.
+- `scripts/update_publications.py`: generate the data-driven homepage sections with Python's standard library.
+- `robots.txt`, `sitemap.xml`, `CNAME`: search and hosting configuration.
+- `google1ce0c4b82039fdff.html`: Google Search Console verification; keep this file and the homepage verification meta tag.
+- `legacy/`: recoverable archive of the previous template and unused resources; excluded from the published site.
+- `othermaterials/`: local personal materials and working notes; ignored by Git and excluded from publication.
 
-**NOTE:** If you fork or re-use this project, please be sure you:
+Read [MAINTENANCE.md](MAINTENANCE.md) for the Chinese maintenance guide.
 
-* Edit `_includes/analytics.html` and either
-  * Replace the Google Analytics tracking code with your own, or
-  * If you don't use Google Analytics, comment the block of code out entirely.
-* Edit `_includes/disqus.html` and either
-  * Replace the `disqus_shortname` with your own DISQUS username, or
-  * If you don't want commenting, remove or comment out the block of code entirely.
+## Update and preview
 
-Otherwise I will receive GA data and DISQUS comments from your website.
+After editing the JSON files in `content/`, run:
+
+```powershell
+python scripts/update_publications.py
+```
+
+Preview locally:
+
+```powershell
+python -m http.server 8000 --bind 127.0.0.1
+```
+
+Visit http://127.0.0.1:8000/ . Push reviewed changes to `master` to publish; check the repository's Pages build and deployment in GitHub Actions.
+
+Common former URLs redirect to the current homepage sections or CV. The Google verification file remains available at its original root URL.
+
+## Attribution
+
+Archived template content retains its original Creative Commons Attribution 3.0 Unported license and existing third-party notices. See `legacy/README.md`. Publication figures and brand icons retain their respective licenses; figure sources are linked on the homepage and icon attribution is in `assets/icons/`.

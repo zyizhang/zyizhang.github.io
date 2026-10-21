@@ -18,9 +18,10 @@ python -m http.server 8000 --bind 127.0.0.1
 - `assets/academic.css`：页面样式及手机布局。
 - `img/snowboarding.jpg`：当前头像原图。照片显示裁切由 CSS 中的 `.portrait` 控制，目前保留人物、头盔和右侧雪山，原图不变。
 - `assets/academic.js`：论文分页，每页 4 项。无 JavaScript 时自动显示完整列表。
-- `othermaterials/publications.json`：论文列表，`type` 可为 `journal`、`preprint` 或 `talk`；支持 `summary`、`image`、`image_source`、`code`、`project`、`pdf` 和 `model`。
-- `othermaterials/news.json`：News，按文件顺序显示；`date` 使用 YYYY 或 YYYY-MM，月份未确认时只填年份。News 区固定最大高度，可滚动查看。
-- `othermaterials/awards.json`：奖项，按年份倒序显示；同一奖项多年获得时，每年填写一条。奖项区可滚动查看。
+- `content/publications.json`：论文列表，`type` 可为 `journal`、`preprint` 或 `talk`；支持 `summary`、`image`、`image_source`、`code`、`project`、`pdf` 和 `model`。
+- `content/news.json`：News，按日期倒序显示；`date` 使用 YYYY 或 YYYY-MM，月份未确认时只填年份。News 区固定最大高度，可滚动查看。
+- `content/awards.json`：奖项，按年份倒序显示；同一奖项多年获得时，每年填写一条。奖项区可滚动查看。
+- `content/source-images/`：论文配图原件，目前保留你提供的 `GPSS.png`。
 - `assets/icons/`：个人链接的小图标及来源、许可说明；无需外部图标服务。
 - `cv/CV_Zhenyi_withoutteaching.pdf`：主页 CV 下载链接使用的文件。
 - `othermaterials/本轮更新与待确认.md`：本轮已完成项目、资料来源和剩余待补充项。
@@ -37,7 +38,7 @@ python scripts/update_publications.py
 
 论文的 `visible` 默认为 `true`，设为 `false` 后保留数据但不显示。目前 PhyVapor-ESFM 暂时隐藏，因此网页显示 8 项成果，分为 2 页，每页 4 项。News 和奖项均由脚本按时间倒序生成，同月条目保持数据文件中的原始顺序。
 
-配图以 WebP 格式保存在 `assets/publications/`，保留原图纵横比；每张配图提供来源链接。JG 和 JGR 当前使用公开预印本的 Figure 1，可能与最终版本不同。GPS Solutions 使用你提供的 `GPSS.png` 转换成轻量 WebP。不要直接修改 `index.html` 中 NEWS、PUBLICATIONS 和 AWARDS 标记之间的自动生成内容。
+配图以 WebP 格式保存在 `assets/publications/`，保留原图纵横比；每张配图提供来源链接。JG 和 JGR 当前使用公开预印本的 Figure 1，可能与最终版本不同。GPS Solutions 的原始配图在 `content/source-images/GPSS.png`，网页使用它的 WebP 版本。不要直接修改 `index.html` 中 NEWS、PUBLICATIONS 和 AWARDS 标记之间的自动生成内容。
 
 ## 发布
 
@@ -55,6 +56,12 @@ Google Search Console 使用「网址前缀」添加 `https://zyizhang.github.io
 
 在 Google Scholar、ORCID、ETH 个人页、GitHub、LinkedIn 等资料中添加正式网址，可帮助访问者和搜索引擎发现主页。可以关注 `Zhenyi Zhang GNSS`、`Zhenyi Zhang ETH`、`张镇驿 GNSS` 等查询，但收录时间和排名由搜索引擎决定，不能保证即时或固定排名。
 
-旧版 `/cv/` 和 `/chinese/cv/` 已改为跳转至指定的无教学版 PDF，移除旧网页中的 GPA、Education 和 Teaching 信息。完整教学版 `cv/CV_Zhenyi.pdf` 仅留本地，已从 Git 提交和 Jekyll 构建中排除。其余旧页面保留，新主页使用页内导航。旧模板的统计脚本不在新主页加载。
+## 归档与兼容入口
+
+`legacy/` 集中保存旧版 Jekyll / Bootstrap 模板、示例文章、教程截图、旧照片、旧公开 CV 和原中文版网站，仍由 Git 保存，但不发布到网站。新主页不依赖此目录。
+
+旧版 `/about/`、`/contact/`、`/chinese/`、`/chinese/about/`、`/chinese/contact/` 和 `/notes/` 保留跳转；`/cv/` 和 `/chinese/cv/` 跳转至当前无教学版 PDF。其他已停用的模板页面由新的 404 页面引导返回主页。
+
+`othermaterials/` 用来保留个人原始 CV、填写记录和工作材料，整个目录不加入 Git，也不发布。此前自动生成的临时缓存和 `.tools/` 仍保留在本地并被忽略。完整教学版 `cv/CV_Zhenyi.pdf`、备用照片和旧头像衍生文件也仅留本地。Google 根目录验证文件和首页验证标签均保留。
 
 不要将私人资料提交到公开仓库。Jekyll 的 exclude 只阻止网站生成，不会隐藏仓库文件。

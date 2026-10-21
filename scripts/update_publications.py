@@ -1,4 +1,4 @@
-"""Render the editable publication list into the static homepage. No dependencies."""
+"""Render publications, news and awards from content/ into the static homepage."""
 import json
 import re
 from html import escape
@@ -13,7 +13,7 @@ def safe_url(value):
     return escape(value, quote=True)
 
 def main():
-    papers = json.loads((ROOT / "othermaterials/publications.json").read_text(encoding="utf-8-sig"))
+    papers = json.loads((ROOT / "content/publications.json").read_text(encoding="utf-8-sig"))
     papers = [p for p in papers if p.get("visible", True)]
     parts = []
     # Issue year takes precedence over online publication year (e.g. GPS Solutions).
@@ -59,7 +59,7 @@ def main():
     before, remaining = html.split(start)
     _, after = remaining.split(end)
     html = before + start + "\n" + "\n".join(parts) + "\n" + end + after
-    news_file = ROOT / "othermaterials/news.json"
+    news_file = ROOT / "content/news.json"
     if news_file.exists():
         news = json.loads(news_file.read_text(encoding="utf-8-sig"))
         entries = []
@@ -70,7 +70,7 @@ def main():
         before, remaining = html.split("<!-- NEWS:START -->")
         _, after = remaining.split("<!-- NEWS:END -->")
         html = before + '<!-- NEWS:START -->\n<ul class="news-list">' + "\n".join(entries) + '</ul>\n<!-- NEWS:END -->' + after
-    awards_file = ROOT / "othermaterials/awards.json"
+    awards_file = ROOT / "content/awards.json"
     if awards_file.exists():
         awards = json.loads(awards_file.read_text(encoding="utf-8-sig"))
         entries = []
