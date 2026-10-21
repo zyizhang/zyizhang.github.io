@@ -43,6 +43,14 @@ python scripts/update_publications.py
 
 正式网址：https://zyizhang.github.io/ 。发布分支为 `master`，推送后由 GitHub Pages 自动构建。更新后提交并推送至该分支，在仓库 Actions 中查看 `pages build and deployment` 是否成功；构建完成后刷新正式网址检查结果。
 
+## 搜索收录
+
+主页标题、描述、canonical 地址及 ProfilePage / Person 结构化数据已配置；`sitemap.xml` 只列出当前主要主页，`robots.txt` 声明其位置。不要把旧模板文章或其他域名放回站点地图。
+
+Google Search Console 使用「网址前缀」添加 `https://zyizhang.github.io/`，通过首页 HTML 标签或根目录验证文件验证归属，再提交 `sitemap.xml`，对主页执行网址检查并请求编入索引。验证标签/文件需长期保留。验证信息必须由你自己的 Google 账号生成，不要使用他人的验证代码。
+
+在 Google Scholar、ORCID、ETH 个人页、GitHub、LinkedIn 等资料中添加正式网址，可帮助访问者和搜索引擎发现主页。可以关注 `Zhenyi Zhang GNSS`、`Zhenyi Zhang ETH`、`张镇驿 GNSS` 等查询，但收录时间和排名由搜索引擎决定，不能保证即时或固定排名。
+
 旧版 `/cv/` 和 `/chinese/cv/` 已改为跳转至指定的无教学版 PDF，移除旧网页中的 GPA、Education 和 Teaching 信息。完整教学版 `cv/CV_Zhenyi.pdf` 仅留本地，已从 Git 提交和 Jekyll 构建中排除。其余旧页面保留，新主页使用页内导航。旧模板的统计脚本不在新主页加载。
 
 不要将私人资料提交到公开仓库。Jekyll 的 exclude 只阻止网站生成，不会隐藏仓库文件。
