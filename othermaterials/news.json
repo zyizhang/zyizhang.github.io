@@ -1,0 +1,67 @@
+[
+  {
+    "date": "2026-10",
+    "text": "Our paper on dynamic tropospheric stochastic constraints for airborne GNSS positioning and ZTD estimation has been accepted in Measurement.",
+    "url": "https://doi.org/10.1016/j.measurement.2026.123448"
+  },
+  {
+    "date": "2026-10",
+    "text": "MSWD is featured by ETH Space Geodesy, highlighting our physics-constrained framework for direct slant wet delay modeling.",
+    "url": "https://space.igp.ethz.ch/news/2026/10/new-publication-by-zhang-soja-2026.html"
+  },
+  {
+    "date": "2026-09",
+    "text": "Our paper on machine-learned mapping functions for the asymmetric troposphere is published in Journal of Geodesy.",
+    "url": "https://doi.org/10.1007/s00190-026-02101-5"
+  },
+  {
+    "date": "2026-09",
+    "text": "Our machine-learned asymmetric mapping functions and openly available trained models are featured by ETH Space Geodesy.",
+    "url": "https://space.igp.ethz.ch/news/2026/09/new-publication-by-zhang-soja-2026.html"
+  },
+  {
+    "date": "2026-06",
+    "text": "MSWD, our hybrid machine-learning framework for slant wet delay modeling, is published in JGR: Atmospheres.",
+    "url": "https://doi.org/10.1029/2026JD046410"
+  },
+  {
+    "date": "2026-05",
+    "text": "I presented MSWD, my hybrid machine-learning model for slant wet delay prediction, at EGU 2026 in Vienna.",
+    "url": "https://space.igp.ethz.ch/news/2026/05/the-space-geodesy-expedition-at-egu2026-in-vienna.html"
+  },
+  {
+    "date": "2025-11",
+    "text": "I visited the Royal Meteorological Institute and the Royal Observatory of Belgium for an exchange on atmospheric observations and GNSS meteorology.",
+    "url": "https://space.igp.ethz.ch/news/2025/11/zhenyi-visits-rmi-and-rob.html"
+  },
+  {
+    "date": "2025-10",
+    "text": "Our group secured Alps supercomputer resources through the Swiss AI Initiative; I contribute to the effort on Earth-system AI and atmospheric prediction.",
+    "url": "https://space.igp.ethz.ch/news/2025/10/space-geodesy-group-secures-alps-supercomputer-grant-under-the-swiss-ai-initiative.html"
+  },
+  {
+    "date": "2025-09",
+    "text": "I presented my work on machine-learned tropospheric mapping functions at the IAG Scientific Assembly 2025 in Rimini.",
+    "url": "https://space.igp.ethz.ch/news/2025/09/iag2025-in-rimini-a-week-of-science-and-collaboration.html"
+  },
+  {
+    "date": "2025-07",
+    "text": "Our TGRS paper on assimilating ground-based and airborne GNSS delays into numerical weather predictions is featured by ETH Space Geodesy.",
+    "url": "https://space.igp.ethz.ch/news/2025/07/new-publication-by-zhang-et-al-2025.html"
+  },
+  {
+    "date": "2025-01",
+    "text": "Our paper on assimilating ground-based and high-dynamic airborne GNSS zenith total delays into numerical weather predictions is published in IEEE TGRS.",
+    "url": "https://doi.org/10.1109/TGRS.2025.3583462"
+  },
+  {
+    "date": "2024-04",
+    "text": "I presented my work on assimilating airborne GNSS observations for numerical weather prediction at EGU 2024 in Vienna.",
+    "url": "https://space.igp.ethz.ch/news/2024/04/space-geodesy-at-egu2024.html"
+  },
+  {
+    "date": "2023-10",
+    "text": "I joined the Space Geodesy group at ETH Zurich as a PhD student, focusing on GNSS meteorology, data assimilation, and machine learning for tropospheric modeling.",
+    "url": "https://space.igp.ethz.ch/news/2023/10/welcome-zhenyi-zhang.html"
+  }
+]

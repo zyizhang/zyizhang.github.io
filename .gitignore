@@ -1,1 +1,13 @@
 _site/
+.tools/
+othermaterials/research-cache/
+othermaterials/fetch_sources.py
+othermaterials/download_figures.py
+othermaterials/download_preprints.py
+__pycache__/
+cv/CV_Zhenyi.pdf
+othermaterials/cvlatex.txt
+othermaterials/*.md
+img/outdoor.jpg
+img/grinderwald.jpg
+assets/portrait.webp

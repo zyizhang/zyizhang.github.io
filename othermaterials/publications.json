@@ -1,0 +1,167 @@
+[
+  {
+    "title": "Machine-learned mapping functions for the asymmetric troposphere",
+    "authors": "Z. Zhang and B. Soja",
+    "year": 2026,
+    "venue": "Journal of Geodesy, 100, 79",
+    "url": "https://doi.org/10.1007/s00190-026-02101-5",
+    "type": "journal",
+    "image": "assets/publications/jg-fig1.webp",
+    "code": "",
+    "date": "2026-09-03",
+    "corresponding_indices": [
+      0
+    ],
+    "summary": "Global asymmetric tropospheric mapping functions learned through physics-constrained neural networks, using ERA5 ray tracing to represent direction-dependent atmospheric delays.",
+    "source_url": "https://doi.org/10.1007/s00190-026-02101-5",
+    "status": "Published",
+    "image_source": "https://doi.org/10.21203/rs.3.rs-7692086/v1",
+    "image_version": "Figure 1 from public preprint"
+  },
+  {
+    "title": "MSWD: A hybrid machine-learning framework for slant wet delay modeling",
+    "authors": "Z. Zhang and B. Soja",
+    "year": 2026,
+    "venue": "Journal of Geophysical Research: Atmospheres",
+    "url": "https://doi.org/10.1029/2026JD046410",
+    "type": "journal",
+    "image": "assets/publications/jgr-fig1.webp",
+    "code": "",
+    "date": "2026-06-24",
+    "corresponding_indices": [
+      0
+    ],
+    "summary": "A hybrid neural model embeds a physical tilting formulation to predict slant wet delays directly, with optional temperature and humidity inputs.",
+    "source_url": "https://doi.org/10.1029/2026JD046410",
+    "status": "Published",
+    "image_source": "https://doi.org/10.21203/rs.3.rs-8770150/v1",
+    "image_version": "Figure 1 from public preprint"
+  },
+  {
+    "title": "Assessing the Impact of Dynamic Tropospheric Stochastic Constraints on Airborne GNSS Positioning and ZTD Estimation",
+    "authors": "Z. Zhang, Y. Lou, W. Zhang, Y. Ouyang, Y. Zhou, J. Bai and B. Soja",
+    "year": 2026,
+    "venue": "Measurement",
+    "url": "https://doi.org/10.1016/j.measurement.2026.123448",
+    "type": "journal",
+    "image": "assets/publications/measurement-fig1.webp",
+    "code": "",
+    "date": "2026-10",
+    "corresponding_indices": [
+      2
+    ],
+    "summary": "Evaluates dynamic tropospheric constraints in airborne GNSS experiments, examining their effects on positioning, zenith delays, and coupled estimation parameters.",
+    "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0263224126031581",
+    "status": "Accepted",
+    "date_source": "Acceptance month supplied by the author"
+  },
+  {
+    "title": "Assimilating ground-based and high-dynamic airborne GNSS zenith total delays into numerical weather predictions",
+    "authors": "Z. Zhang, M. Liu, W. Zhang, Y. Lou and B. Soja",
+    "year": 2025,
+    "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+    "url": "https://doi.org/10.1109/TGRS.2025.3583462",
+    "type": "journal",
+    "image": "assets/publications/tgrs-fig1.webp",
+    "code": "",
+    "date": "2025-01",
+    "corresponding_indices": [
+      0,
+      2
+    ],
+    "summary": "Combines ground-based and UAV-derived GNSS zenith delays in WRF data assimilation to improve the atmospheric humidity field.",
+    "source_url": "https://space.igp.ethz.ch/news/2025/07/new-publication-by-zhang-et-al-2025.html",
+    "status": "Published",
+    "image_source": "https://space.igp.ethz.ch/news/2025/07/new-publication-by-zhang-et-al-2025.html",
+    "date_source": "Publication month supplied by the author"
+  },
+  {
+    "title": "Dynamic stochastic model for estimating GNSS tropospheric delays from air-borne platforms",
+    "authors": "Z. Zhang, Y. Lou, W. Zhang, Z. Wang, Y. Zhou, J. Bai, Z. Zhang and C. Shi",
+    "year": 2023,
+    "venue": "GPS Solutions",
+    "url": "https://doi.org/10.1007/s10291-022-01375-4",
+    "type": "journal",
+    "image": "assets/publications/gps-fig1.webp",
+    "code": "",
+    "date": "2022-12-17",
+    "corresponding_indices": [
+      2
+    ],
+    "summary": "Adapts tropospheric process noise to spatial and temporal atmospheric variability, improving high-dynamic airborne GNSS zenith-delay estimation.",
+    "source_url": "https://doi.org/10.1007/s10291-022-01375-4",
+    "status": "Published",
+    "image_source": "https://doi.org/10.1007/s10291-022-01375-4",
+    "image_version": "Figure supplied by the author (GPSS.png)"
+  },
+  {
+    "title": "Assessment of ERA-Interim and ERA5 reanalysis data on atmospheric corrections for InSAR",
+    "authors": "Z. Zhang, Y. Lou, W. Zhang, H. Wang, Y. Zhou and J. Bai",
+    "year": 2022,
+    "venue": "International Journal of Applied Earth Observation and Geoinformation",
+    "url": "https://doi.org/10.1016/j.jag.2022.102822",
+    "type": "journal",
+    "image": "assets/publications/jag-fig1.webp",
+    "code": "",
+    "date": "2022",
+    "corresponding_indices": [
+      2
+    ],
+    "summary": "Compares ERA5 and ERA-Interim for InSAR atmospheric correction across seasons and climate regimes, highlighting limitations in resolving small-scale turbulence.",
+    "source_url": "https://doi.org/10.1016/j.jag.2022.102822",
+    "status": "Published"
+  },
+  {
+    "title": "On the Assessment GPS-Based WRFDA for InSAR Atmospheric Correction: A Case Study in Pearl River Delta Region of China",
+    "authors": "Z. Zhang, Y. Lou, W. Zhang, H. Wang, Y. Zhou and J. Bai",
+    "year": 2021,
+    "venue": "Remote Sensing",
+    "url": "https://doi.org/10.3390/rs13163280",
+    "type": "journal",
+    "image": "assets/publications/rs-fig1.webp",
+    "code": "",
+    "date": "2021",
+    "corresponding_indices": [
+      2
+    ],
+    "summary": "Assesses GPS zenith-delay assimilation in WRFDA for correcting InSAR atmospheric errors in China's Pearl River Delta.",
+    "source_url": "https://doi.org/10.3390/rs13163280",
+    "status": "Published"
+  },
+  {
+    "title": "Earth System Foundation Model (ESFM): A unified framework for heterogeneous data integration and forecasting",
+    "authors": "F. Ozdemir, Y. Cheng, S. Mohebi, F. Lehmann, S. Adamov, Z. Zhang, L. Trentini, D. Grund, O. Fuhrer, T. Hoefler, S. Mishra, S. Schemm, B. Soja and M. Salzmann",
+    "year": 2026,
+    "venue": "Communications Earth & Environment - Under revision (preprint)",
+    "url": "https://arxiv.org/abs/2605.00850",
+    "type": "preprint",
+    "image": "assets/publications/esfm-framework.webp",
+    "code": "https://github.com/swiss-ai/ESFM",
+    "date": "2026-04-20",
+    "corresponding_indices": [
+      0
+    ],
+    "summary": "An open Earth-system foundation model combines gridded, satellite, and station observations within one backbone for flexible forecasting and downstream adaptation.",
+    "source_url": "https://arxiv.org/abs/2605.00850",
+    "project": "https://swiss-ai.github.io/ESFM/",
+    "pdf": "https://arxiv.org/pdf/2605.00850",
+    "image_source": "https://swiss-ai.github.io/ESFM/"
+  },
+  {
+    "title": "PhyVapor-ESFM: A Physics-Constrained Framework for Integrating Satellite Water Vapor Observations into Foundation Model",
+    "authors": "Z. Zhang, Y. Cheng, F. Ozdemir, L. Trentini and B. Soja",
+    "year": 2026,
+    "venue": "Workshop on Machine Learning for Earth System Modelling · 24–26 August 2026 · Bonn, Germany",
+    "url": "https://cesoc.net/mlesm-workshop/",
+    "type": "talk",
+    "image": "",
+    "code": "",
+    "date": "2026-08-24",
+    "corresponding_indices": [
+      0
+    ],
+    "summary": "A physics-constrained framework for integrating satellite water-vapor observations into Earth-system foundation models.",
+    "source_url": "https://cesoc.net/mlesm-workshop/",
+    "visible": false
+  }
+]
