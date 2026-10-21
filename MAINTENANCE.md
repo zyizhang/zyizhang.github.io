@@ -41,7 +41,7 @@ python scripts/update_publications.py
 
 ## 发布
 
-本轮只准备本地版本。审核后，可提交并推送至 GitHub Pages 使用的分支。GitHub 仓库 Settings → Pages 中应确认发布分支及根目录；推送后在 Actions 中查看构建是否成功。
+正式网址：https://zyizhang.github.io/ 。发布分支为 `master`，推送后由 GitHub Pages 自动构建。更新后提交并推送至该分支，在仓库 Actions 中查看 `pages build and deployment` 是否成功；构建完成后刷新正式网址检查结果。
 
 旧版 `/cv/` 和 `/chinese/cv/` 已改为跳转至指定的无教学版 PDF，移除旧网页中的 GPA、Education 和 Teaching 信息。完整教学版 `cv/CV_Zhenyi.pdf` 仅留本地，已从 Git 提交和 Jekyll 构建中排除。其余旧页面保留，新主页使用页内导航。旧模板的统计脚本不在新主页加载。
 
