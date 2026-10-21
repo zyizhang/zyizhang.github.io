@@ -56,6 +56,14 @@ Google Search Console 使用「网址前缀」添加 `https://zyizhang.github.io
 
 在 Google Scholar、ORCID、ETH 个人页、GitHub、LinkedIn 等资料中添加正式网址，可帮助访问者和搜索引擎发现主页。可以关注 `Zhenyi Zhang GNSS`、`Zhenyi Zhang ETH`、`张镇驿 GNSS` 等查询，但收录时间和排名由搜索引擎决定，不能保证即时或固定排名。
 
+## 访问统计
+
+主页通过 GoatCounter 统计访问，后台地址为 https://zyizhang.goatcounter.com/ 。安装脚本在 `index.html` 底部，使用异步 HTTPS 加载；主页不显示公开计数器。
+
+统计后台的访问权限在 GoatCounter Settings 的 Dashboard viewable by 中管理，应保持仅登录用户可见。安装代码中的站点地址用于发送统计数据，不是登录凭据。网站代码不保存后台密码或 API Token。
+
+统计从接入后开始。测试时访问正式主页，然后登录后台检查访问记录；广告拦截器可能阻止统计脚本。如果需要排除自己的访问，可按 GoatCounter 官方说明设置：https://www.goatcounter.com/help/skip-dev 。
+
 ## 归档与兼容入口
 
 `legacy/` 集中保存旧版 Jekyll / Bootstrap 模板、示例文章、教程截图、旧照片、旧公开 CV 和原中文版网站，仍由 Git 保存，但不发布到网站。新主页不依赖此目录。
