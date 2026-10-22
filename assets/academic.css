@@ -63,7 +63,7 @@ body { margin: 0; background: var(--background); color: var(--ink); font: 16px/1
 a { color: var(--blue); text-decoration: none; }
 a:hover { text-decoration: underline; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
-.page { max-width: 1180px; margin: auto; display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 65px; padding: 48px 35px 30px; }
+.page { position: relative; max-width: 1180px; margin: auto; display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 65px; padding: 72px 35px 30px; }
 .sidebar { position: sticky; top: 28px; align-self: start; max-height: calc(100vh - 56px); overflow-y: auto; padding-right: 8px; scrollbar-width: thin; scrollbar-color: var(--sidebar-scroll) var(--background); }
 .name { font-size: 28px; line-height: 1.3; font-weight: 700; color: var(--name); letter-spacing: -.7px; }
 .chinese-name { display: block; font-size: 18px; font-weight: 500; letter-spacing: 2px; margin-top: 5px; }
@@ -74,7 +74,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-
 .social { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 12px; font-size: 12px; }
 .social a { display: flex; align-items: center; gap: 7px; min-width: 0; line-height: 1.4; }
 .link-icon { display: block; flex: 0 0 17px; width: 17px; height: 17px; object-fit: contain; }
-.theme-toggle { display: inline-flex; align-items: center; gap: 7px; font: inherit; font-size: 12px; line-height: 1.4; color: var(--nav); background: transparent; border: 1px solid var(--button-border); border-radius: 4px; padding: 7px 10px; margin: 0 0 16px; cursor: pointer; }
+.theme-toggle { position: absolute; top: 18px; right: 35px; display: inline-flex; align-items: center; gap: 7px; font: inherit; font-size: 12px; line-height: 1.4; color: var(--nav); background: transparent; border: 1px solid var(--button-border); border-radius: 4px; padding: 7px 10px; margin: 0; cursor: pointer; }
 .theme-toggle:hover { background: var(--button-hover); border-color: var(--button-hover-border); }
 .theme-toggle svg { flex-shrink: 0; }
 .theme-icon-light { display: none; }
@@ -137,7 +137,8 @@ footer { font-size: 12px; color: var(--muted); padding-bottom: 15px; }
 [hidden] { display: none !important; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media (max-width: 900px) {
-  .page { gap: 35px; grid-template-columns: 205px minmax(0, 1fr); padding: 36px 25px; }
+  .page { gap: 35px; grid-template-columns: 205px minmax(0, 1fr); padding: 72px 25px; }
+  .theme-toggle { right: 25px; }
   .name { font-size: 25px; }
   .portrait-frame { width: 190px; height: 210px; }
   .social { grid-template-columns: 1fr; gap: 8px; }
@@ -145,7 +146,7 @@ footer { font-size: 12px; color: var(--muted); padding-bottom: 15px; }
   .paper-image { height: 105px; }
 }
 @media (max-width: 650px) {
-  .page { display: block; padding: 28px 23px; }
+  .page { display: block; padding: 72px 23px; }
   .sidebar { position: static; max-height: none; overflow: visible; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr) 135px; column-gap: 16px; margin-bottom: 35px; }
   .name, .role, .location, .social { grid-column: 1; }
   .name { grid-row: 1; }
@@ -153,7 +154,7 @@ footer { font-size: 12px; color: var(--muted); padding-bottom: 15px; }
   .role { grid-row: 2; margin: 8px 0; }
   .portrait-frame { grid-column: 2; grid-row: 1 / 4; width: 135px; height: 158px; align-self: start; }
   .location { grid-row: 3; margin: 0 0 12px; }
-  .theme-toggle { grid-column: 1 / -1; justify-self: start; margin: 4px 0 0; }
+  .theme-toggle { right: 23px; }
   .social { grid-column: 1 / -1; grid-template-columns: 1fr 1fr; margin-top: 12px; max-width: 360px; }
   .sidebar nav { grid-column: 1 / -1; flex-direction: row; flex-wrap: wrap; gap: 6px 17px; margin-top: 20px; padding-top: 13px; }
   .sidebar nav a { font-size: 12px; }
@@ -178,6 +179,7 @@ footer { font-size: 12px; color: var(--muted); padding-bottom: 15px; }
   .name { font-size: 23px; }
 }
 @media print {
+  .page { padding-top: 28px; }
   .publication[hidden] { display: grid !important; }
   .pagination, .theme-toggle { display: none !important; }
   .news-scroll, .awards-scroll { max-height: none; overflow: visible; }
