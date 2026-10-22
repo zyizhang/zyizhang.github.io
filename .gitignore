@@ -3,7 +3,6 @@ _site/
 __pycache__/
 *.py[cod]
 /othermaterials/
-/cv/CV_Zhenyi.pdf
 /img/outdoor.jpg
 /img/grinderwald.jpg
 /assets/portrait.webp

@@ -23,7 +23,7 @@ python -m http.server 8000 --bind 127.0.0.1
 - `content/awards.json`：奖项，按年份倒序显示；同一奖项多年获得时，每年填写一条。奖项区可滚动查看。
 - `content/source-images/`：论文配图原件，目前保留你提供的 `GPSS.png`。
 - `assets/icons/`：个人链接的小图标及来源、许可说明；无需外部图标服务。
-- `cv/CV_Zhenyi_withoutteaching.pdf`：主页 CV 下载链接使用的文件。
+- `cv/CV_Zhenyi.pdf`：主页 CV 下载链接使用的文件。
 - `othermaterials/本轮更新与待确认.md`：本轮已完成项目、资料来源和剩余待补充项。
 - `othermaterials/网站资料待补充.md`：用中文填写补充资料，之后可交给助手更新。
 - `othermaterials/cvlatex.txt`：原始 CV，修改该文件不会自动同步网站。
@@ -68,8 +68,8 @@ Google Search Console 使用「网址前缀」添加 `https://zyizhang.github.io
 
 `legacy/` 集中保存旧版 Jekyll / Bootstrap 模板、示例文章、教程截图、旧照片、旧公开 CV 和原中文版网站，仍由 Git 保存，但不发布到网站。新主页不依赖此目录。
 
-旧版 `/about/`、`/contact/`、`/chinese/`、`/chinese/about/`、`/chinese/contact/` 和 `/notes/` 保留跳转；`/cv/` 和 `/chinese/cv/` 跳转至当前无教学版 PDF。其他已停用的模板页面由新的 404 页面引导返回主页。
+旧版 `/about/`、`/contact/`、`/chinese/`、`/chinese/about/`、`/chinese/contact/` 和 `/notes/` 保留跳转；`/cv/` 和 `/chinese/cv/` 跳转至当前公开 CV PDF。其他已停用的模板页面由新的 404 页面引导返回主页。
 
-`othermaterials/` 用来保留个人原始 CV、填写记录和工作材料，整个目录不加入 Git，也不发布。此前自动生成的临时缓存和 `.tools/` 仍保留在本地并被忽略。完整教学版 `cv/CV_Zhenyi.pdf`、备用照片和旧头像衍生文件也仅留本地。Google 根目录验证文件和首页验证标签均保留。
+`othermaterials/` 用来保留个人原始 CV、填写记录和工作材料，整个目录不加入 Git，也不发布。此前自动生成的临时缓存和 `.tools/` 仍保留在本地并被忽略。当前公开 CV 为 `cv/CV_Zhenyi.pdf`，后续可直接替换此文件并提交更新。之前公开的 `cv/CV_Zhenyi_withoutteaching.pdf` 保留以兼容旧下载链接；备用照片和旧头像衍生文件仅留本地。Google 根目录验证文件和首页验证标签均保留。
 
 不要将私人资料提交到公开仓库。Jekyll 的 exclude 只阻止网站生成，不会隐藏仓库文件。
