@@ -1,4 +1,28 @@
 (() => {
+  const button = document.getElementById('theme-toggle');
+  if (!button) return;
+  const label = button.querySelector('[data-theme-label]');
+  function updateButton() {
+    const dark = document.documentElement.dataset.theme === 'dark';
+    label.textContent = dark ? 'Light mode' : 'Dark mode';
+    button.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+  button.addEventListener('click', () => {
+    const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = theme;
+    try { localStorage.setItem('zhenyi-theme', theme); } catch {}
+    updateButton();
+  });
+  window.addEventListener('storage', event => {
+    if (event.key !== 'zhenyi-theme' && event.key !== null) return;
+    document.documentElement.dataset.theme = event.newValue === 'dark' ? 'dark' : 'light';
+    updateButton();
+  });
+  updateButton();
+  button.hidden = false;
+})();
+
+(() => {
   const list = document.getElementById('publication-list');
   const controls = [...document.querySelectorAll('.pagination')];
   if (!list || !controls.length) return;

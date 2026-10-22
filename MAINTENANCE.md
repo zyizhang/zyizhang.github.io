@@ -16,6 +16,7 @@ python -m http.server 8000 --bind 127.0.0.1
 
 - `index.html`：简介、研究方向、Academic Service、奖项和联系信息。Education、Teaching 和学生指导已从主页移除。
 - `assets/academic.css`：页面样式及手机布局。
+- 主题切换按钮位于侧栏个人信息区，默认使用白色背景。访客可切换深色模式，选择保存在当前浏览器的 `localStorage` 中（键名 `zhenyi-theme`）。两套颜色在 `assets/academic.css` 的主题变量中维护，按钮逻辑在 `assets/academic.js`；首页 `<head>` 中的小脚本用于在样式加载前恢复主题，避免深色模式刷新时闪白。浏览器禁用本地存储时仍可切换，打印时使用浅色主题。
 - `img/snowboarding.jpg`：当前头像原图。照片显示裁切由 CSS 中的 `.portrait` 控制，目前保留人物、头盔和右侧雪山，原图不变。
 - `assets/academic.js`：论文分页，每页 4 项。无 JavaScript 时自动显示完整列表。
 - `content/publications.json`：论文列表，`type` 可为 `journal`、`preprint` 或 `talk`；支持 `summary`、`image`、`image_source`、`code`、`project`、`pdf` 和 `model`。
