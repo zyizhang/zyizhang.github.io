@@ -15,6 +15,7 @@ python -m http.server 8000 --bind 127.0.0.1
 ## 更新位置
 
 - `index.html`：简介、研究方向、Academic Service、奖项和联系信息。Education、Teaching 和学生指导已从主页移除。
+- 公开页面仅使用英文姓名 Zhenyi Zhang，标题、搜索描述和结构化数据也不添加中文姓名。About Me 的学历只写武汉大学的 MSc、BSc 和硕士导师，不列专业名称。
 - `assets/academic.css`：页面样式及手机布局。
 - 主题切换按钮位于页面右上角，与正文右侧边距对齐，手机布局也在顶部预留空间，避免遮挡内容；按钮随页面滚动。默认使用白色背景。访客可切换深色模式，选择保存在当前浏览器的 `localStorage` 中（键名 `zhenyi-theme`）。两套颜色在 `assets/academic.css` 的主题变量中维护，按钮逻辑在 `assets/academic.js`；首页 `<head>` 中的小脚本用于在样式加载前恢复主题，避免深色模式刷新时闪白。浏览器禁用本地存储时仍可切换，打印时使用浅色主题。
 - `img/snowboarding.jpg`：当前头像原图。照片显示裁切由 CSS 中的 `.portrait` 控制，目前保留人物、头盔和右侧雪山，原图不变。
@@ -55,7 +56,7 @@ Google Search Console 使用「网址前缀」添加 `https://zyizhang.github.io
 
 首页 `<head>` 中同时保留了你提供的 `google-site-verification` 元标签，也可用于 HTML 标签验证。之后修改首页时请保留此标签。
 
-在 Google Scholar、ORCID、ETH 个人页、GitHub、LinkedIn 等资料中添加正式网址，可帮助访问者和搜索引擎发现主页。可以关注 `Zhenyi Zhang GNSS`、`Zhenyi Zhang ETH`、`张镇驿 GNSS` 等查询，但收录时间和排名由搜索引擎决定，不能保证即时或固定排名。
+在 Google Scholar、ORCID、ETH 个人页、GitHub、LinkedIn 等资料中添加正式网址，可帮助访问者和搜索引擎发现主页。可以关注 `Zhenyi Zhang GNSS`、`Zhenyi Zhang ETH` 等查询，但收录时间和排名由搜索引擎决定，不能保证即时或固定排名。
 
 ## 访问统计
 
