@@ -2,6 +2,8 @@
 
 Live site: https://zyizhang.github.io/
 
+Personal academic homepage of **Zhenyi Zhang**, PhD candidate in the Space Geodesy Group at **ETH Zurich**. Research focuses on GNSS meteorology, tropospheric modeling, physics-informed machine learning, and AI for Earth science. [Visit the homepage](https://zyizhang.github.io/).
+
 A static academic homepage, published with GitHub Pages from the `master` branch. The active site has no Bootstrap, front-end package manager, or local Ruby dependency.
 
 ## Repository layout
@@ -14,6 +16,7 @@ A static academic homepage, published with GitHub Pages from the `master` branch
 - `scripts/update_publications.py`: generate the data-driven homepage sections with Python's standard library.
 - `robots.txt`, `sitemap.xml`, `CNAME`: search and hosting configuration.
 - `google1ce0c4b82039fdff.html`: Google Search Console verification; keep this file and the homepage verification meta tag.
+- The root 32-character hexadecimal `.txt` file verifies IndexNow ownership; `scripts/submit_indexnow.py` notifies Bing and other IndexNow participants after a homepage update is live.
 - `legacy/`: recoverable archive of the previous template and unused resources; excluded from the published site.
 - `othermaterials/`: local personal materials and working notes; ignored by Git and excluded from publication.
 

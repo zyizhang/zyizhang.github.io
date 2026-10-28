@@ -58,6 +58,18 @@ Google Search Console 使用「网址前缀」添加 `https://zyizhang.github.io
 
 在 Google Scholar、ORCID、ETH 个人页、GitHub、LinkedIn 等资料中添加正式网址，可帮助访问者和搜索引擎发现主页。可以关注 `Zhenyi Zhang GNSS`、`Zhenyi Zhang ETH` 等查询，但收录时间和排名由搜索引擎决定，不能保证即时或固定排名。
 
+### 必应与 IndexNow
+
+Google Search Console 的收录状态只代表 Google；Bing / 必应需要在 https://www.bing.com/webmasters/ 单独检查。可以从已验证的 Google Search Console 导入网站，或按必应提供的方式验证，再确认站点地图为 `https://zyizhang.github.io/sitemap.xml`，并检查主页的索引状态。
+
+根目录的 32 位十六进制文件名 `.txt` 文件用于 IndexNow 网站归属验证，文件内容与文件名主体相同。保持此文件公开可访问，不要移动或加入 Jekyll exclude。
+
+主页更新发布完成后，可运行 `python scripts/submit_indexnow.py`，向必应提交主页变更通知；IndexNow 会在参与的搜索引擎之间共享通知。脚本先检查线上验证文件是否匹配。HTTP 200 代表已收到通知，202 代表已收到、归属验证待完成，均不保证收录或排名。不要重复提交未变化的页面。
+
+首页主标题、浏览器标题和分享标题统一突出英文姓名及 ETH 身份。`sitemap.xml` 的 `lastmod` 只在主页内容确实修改时更新为实际日期，不为了催收录而每日刷新。不要添加同名他人的信息或重复堆砌关键词。
+
+个人资料中的主页链接可填写 `https://zyizhang.github.io/`。GitHub Profile 的 Bio 可使用：`PhD candidate at ETH Zurich | GNSS meteorology, space geodesy & AI for Earth science`，Website 填正式网址；这是 GitHub 账号资料，需要在账号设置中单独更新。
+
 ## 访问统计
 
 主页通过 GoatCounter 统计访问，后台地址为 https://zyizhang.goatcounter.com/ 。安装脚本在 `index.html` 底部，使用异步 HTTPS 加载；主页不显示公开计数器。
