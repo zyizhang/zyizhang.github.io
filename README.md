@@ -10,7 +10,6 @@ A static academic homepage, published with GitHub Pages from the `master` branch
 
 - `index.html`: homepage, biography and research interests.
 - `assets/`: current CSS, theme and pagination JavaScript, publication thumbnails and link icons with attribution.
-- `cv/`: a contact page for CV requests. PDF CVs are not published.
 - `img/snowboarding.jpg`: current profile photo.
 - `robots.txt`, `sitemap.xml`, `CNAME`: search and hosting configuration.
 - `google1ce0c4b82039fdff.html`: Google Search Console verification; keep this file and the homepage verification meta tag.
@@ -28,7 +27,7 @@ python -m http.server 8000 --bind 127.0.0.1
 
 Visit http://127.0.0.1:8000/ . Push reviewed changes to `master` to publish; check the repository's Pages build and deployment in GitHub Actions.
 
-Common former URLs redirect to the current homepage sections. Old CV entry pages provide contact information instead of a PDF download. The Google verification file remains available at its original root URL.
+Common former URLs redirect to the current homepage sections. The Google verification file remains available at its original root URL.
 
 ## Attribution
 
