@@ -9,4 +9,4 @@ https://fontawesome.com/license/free
 The ETH mark is extracted from the inline SVG on the official ETH Space Geodesy website; its viewport shows the ETH portion for legibility at icon size. It identifies the linked ETH profile.
 https://space.igp.ethz.ch/
 
-Email and document icons are simple original SVG line drawings for this site. These files are local assets and do not contact third-party icon services when visitors view the page.
+The email icon is a simple original SVG line drawing for this site. These files are local assets and do not contact third-party icon services when visitors view the page.

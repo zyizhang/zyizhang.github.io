@@ -9,26 +9,16 @@ A static academic homepage, published with GitHub Pages from the `master` branch
 ## Repository layout
 
 - `index.html`: homepage, biography and research interests.
-- `assets/`: current CSS, pagination JavaScript, publication thumbnails and link icons.
-- `content/`: editable public publication, news and award data; original publication figures are in `content/source-images/`.
-- `cv/`: current public CV and its legacy URL redirect.
+- `assets/`: current CSS, theme and pagination JavaScript, publication thumbnails and link icons with attribution.
+- `cv/`: a contact page for CV requests. PDF CVs are not published.
 - `img/snowboarding.jpg`: current profile photo.
-- `scripts/update_publications.py`: generate the data-driven homepage sections with Python's standard library.
 - `robots.txt`, `sitemap.xml`, `CNAME`: search and hosting configuration.
 - `google1ce0c4b82039fdff.html`: Google Search Console verification; keep this file and the homepage verification meta tag.
-- The root 32-character hexadecimal `.txt` file verifies IndexNow ownership; `scripts/submit_indexnow.py` notifies Bing and other IndexNow participants after a homepage update is live.
-- `legacy/`: recoverable archive of the previous template and unused resources; excluded from the published site.
-- `othermaterials/`: local personal materials and working notes; ignored by Git and excluded from publication.
+- The root 32-character hexadecimal `.txt` file verifies IndexNow ownership.
 
-Read [MAINTENANCE.md](MAINTENANCE.md) for the Chinese maintenance guide.
+Only files required by the public website and their attribution are tracked. Private documents, source materials, editing tools and archives are maintained locally. The `.gitignore` allowlist prevents new materials from being uploaded by default.
 
 ## Update and preview
-
-After editing the JSON files in `content/`, run:
-
-```powershell
-python scripts/update_publications.py
-```
 
 Preview locally:
 
@@ -38,8 +28,8 @@ python -m http.server 8000 --bind 127.0.0.1
 
 Visit http://127.0.0.1:8000/ . Push reviewed changes to `master` to publish; check the repository's Pages build and deployment in GitHub Actions.
 
-Common former URLs redirect to the current homepage sections or CV. The Google verification file remains available at its original root URL.
+Common former URLs redirect to the current homepage sections. Old CV entry pages provide contact information instead of a PDF download. The Google verification file remains available at its original root URL.
 
 ## Attribution
 
-Archived template content retains its original Creative Commons Attribution 3.0 Unported license and existing third-party notices. See `legacy/README.md`. Publication figures and brand icons retain their respective licenses; figure sources are linked on the homepage and icon attribution is in `assets/icons/`.
+Publication figures and brand icons retain their respective licenses; figure sources are linked on the homepage and icon attribution is in `assets/icons/`.
