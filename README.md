@@ -10,7 +10,7 @@ A static academic homepage, published with GitHub Pages from the `master` branch
 
 - `index.html`: homepage, biography and research interests.
 - `assets/`: current CSS, theme and pagination JavaScript, publication thumbnails and link icons with attribution.
-- `assets/interactions-config.js`, `assets/interactions.js`, `assets/interactions.css`: public guestbook and private contact form. Configuration contains service URLs only; credentials and backend source are kept separately.
+- `assets/interactions-config.js`, `assets/interactions.js`, `assets/interactions.css`: Public Square message board. Configuration contains the public service URL only; credentials and backend source are kept separately.
 - `img/snowboarding.jpg`: current profile photo.
 - `robots.txt`, `sitemap.xml`, `CNAME`: search and hosting configuration.
 - `google1ce0c4b82039fdff.html`: Google Search Console verification; keep this file and the homepage verification meta tag.
@@ -28,7 +28,7 @@ python -m http.server 8000 --bind 127.0.0.1
 
 Visit http://127.0.0.1:8000/ . Push reviewed changes to `master` to publish; check the repository's Pages build and deployment in GitHub Actions.
 
-Public Square, at the end of the homepage, loads the pinned [Waline client](https://waline.js.org/) when its section approaches the viewport. Contact details and the private message form appear side by side on wide screens and stack on smaller screens. Public messages and private contact email use a separate backend; the homepage does not store submissions in this repository. Private-form submissions are restricted to the production website origin, so local preview is for layout rather than sending messages.
+Public Square, at the end of the homepage, loads the pinned [Waline client](https://waline.js.org/) when its section approaches the viewport. Public messages use a separate backend and are not stored in this repository. Contact provides a direct email link; the former private-message form and automatic comment email notifications have been withdrawn.
 
 Common former URLs redirect to the current homepage sections. The Google verification file remains available at its original root URL.
 
