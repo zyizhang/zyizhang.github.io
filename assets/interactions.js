@@ -19,7 +19,7 @@ async function loadGuestbook() {
   if (!container || !status) return;
   const server = serviceUrl(interactionsConfig.commentsServer);
   if (!server) {
-    setStatus(status, 'The guestbook is not available yet. You can reach me by email.');
+    setStatus(status, 'The message board is not available yet. You can reach me by email.');
     return;
   }
   setStatus(status, 'Loading messages…');
@@ -40,7 +40,7 @@ async function loadGuestbook() {
       login: 'disable',
       pageSize: 5,
       commentSorting: 'latest',
-      wordLimit: [3, 2000],
+      wordLimit: 2000,
       emoji: [],
       search: false,
       imageUploader: false,
@@ -52,9 +52,19 @@ async function loadGuestbook() {
       locale: {
         nick: 'Display name',
         anonymous: 'Anonymous',
-        placeholder: 'Leave a public message. You may leave the display name blank to post as Anonymous.',
+        placeholder: 'Share a thought or say hello…',
       },
     });
+    // Waline has no name-placeholder option. Apply it to each mounted editor,
+    // including editors created later for replies, without changing saved names.
+    const showAnonymousPlaceholder = () => {
+      container.querySelectorAll('input[name="nick"]').forEach(input => {
+        input.placeholder = 'Anonymous';
+      });
+    };
+    showAnonymousPlaceholder();
+    const editorObserver = new MutationObserver(showAnonymousPlaceholder);
+    editorObserver.observe(container, { childList: true, subtree: true });
     setStatus(status, '');
   } catch {
     setStatus(status, 'Messages could not be loaded. Please try again later or contact me by email.', true);

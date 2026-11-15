@@ -2,20 +2,32 @@
 .interaction-note { line-height: 1.65; }
 .interaction-status { min-height: 1.75em; color: var(--muted); font-size: 13px; margin: 10px 0; }
 .interaction-status[data-error="true"] { color: var(--ink); font-weight: 600; }
-.contact-form { max-width: 610px; margin-top: 24px; }
+.interaction-status:empty { min-height: 0; margin: 0; }
+.contact-layout { display: grid; grid-template-columns: minmax(180px, .8fr) minmax(0, 1.4fr); gap: 28px; align-items: start; }
+.contact-details { padding-top: 3px; font-size: 14px; line-height: 1.85; }
+.contact-details a { overflow-wrap: anywhere; }
+.contact-form { min-width: 0; margin: 0; padding: 20px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
 .contact-form fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
 .contact-form legend { font-size: 16px; font-weight: 650; padding: 0; margin-bottom: 14px; }
-.contact-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.contact-fields { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; align-items: end; }
 .contact-form label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 15px; }
 .contact-form label span { color: var(--muted); font-weight: 400; }
 .contact-form input, .contact-form textarea { display: block; width: 100%; box-sizing: border-box; margin-top: 6px; padding: 9px 11px; font: inherit; font-size: 14px; line-height: 1.6; color: var(--ink); background: var(--background); border: 1px solid var(--button-border); border-radius: 4px; }
-.contact-form textarea { min-height: 145px; resize: vertical; }
+.contact-form textarea { min-height: 125px; resize: vertical; }
 .contact-form input:focus-visible, .contact-form textarea:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 .contact-form button { display: inline-flex; align-items: center; font: inherit; font-size: 13px; font-weight: 600; color: var(--blue); background: transparent; border: 1px solid var(--link-border); border-radius: 4px; padding: 8px 15px; cursor: pointer; }
 .contact-form button:hover:not(:disabled) { background: var(--button-hover); border-color: var(--button-hover-border); }
 .contact-form button:disabled { color: var(--disabled); border-color: var(--disabled-border); cursor: default; }
 .contact-form .contact-trap { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+.public-square { padding-bottom: 10px; margin-bottom: 22px; border-bottom: 0; }
+.square-card { padding: 22px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.square-card .interaction-intro { color: var(--ink); font-size: 14px; margin-bottom: 8px; }
+.square-card > .interaction-note { margin-bottom: 20px; }
 #guestbook-comments { --waline-font-size: 14px; --waline-theme-color: var(--blue); --waline-active-color: var(--blue); --waline-color: var(--ink); --waline-white: var(--background); --waline-light-grey: var(--muted); --waline-dark-grey: var(--muted); --waline-bg-color: var(--background); --waline-bg-color-light: var(--surface); --waline-bg-color-hover: var(--button-hover); --waline-border-color: var(--button-border); --waline-info-color: var(--muted); --waline-info-bg-color: var(--surface); --waline-disable-bg-color: var(--surface); --waline-disable-color: var(--muted); --waline-bq-color: var(--surface); font-size: 14px; }
-#guestbook-comments .wl-panel { box-shadow: none; }
-@media (max-width: 650px) { .contact-fields { grid-template-columns: 1fr; gap: 0; } }
+#guestbook-comments .wl-panel { box-shadow: none; border-radius: 7px; }
+#guestbook-comments .wl-input::placeholder { color: var(--muted); opacity: .7; font-weight: 400; }
+#guestbook-comments .wl-header { border-bottom-color: var(--line); }
+#guestbook-comments .wl-editor { min-height: 135px; }
+@media (max-width: 900px) { .contact-layout { grid-template-columns: minmax(0, 1fr); gap: 12px; } }
+@media (max-width: 650px) { .contact-fields { grid-template-columns: 1fr; gap: 0; } .contact-form, .square-card { padding: 17px; } }
 @media print { .contact-form, #guestbook-comments, #guestbook .interaction-status { display: none; } }

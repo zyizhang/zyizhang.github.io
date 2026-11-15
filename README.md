@@ -28,7 +28,7 @@ python -m http.server 8000 --bind 127.0.0.1
 
 Visit http://127.0.0.1:8000/ . Push reviewed changes to `master` to publish; check the repository's Pages build and deployment in GitHub Actions.
 
-The guestbook loads the pinned [Waline client](https://waline.js.org/) when its section approaches the viewport. Public messages and private contact email use a separate backend; the homepage does not store submissions in this repository. Private-form submissions are restricted to the production website origin, so local preview is for layout rather than sending messages.
+Public Square, at the end of the homepage, loads the pinned [Waline client](https://waline.js.org/) when its section approaches the viewport. Contact details and the private message form appear side by side on wide screens and stack on smaller screens. Public messages and private contact email use a separate backend; the homepage does not store submissions in this repository. Private-form submissions are restricted to the production website origin, so local preview is for layout rather than sending messages.
 
 Common former URLs redirect to the current homepage sections. The Google verification file remains available at its original root URL.
 
