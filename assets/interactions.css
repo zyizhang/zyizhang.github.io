@@ -1,0 +1,21 @@
+.interaction-intro, .interaction-note { color: var(--muted); font-size: 13px; }
+.interaction-note { line-height: 1.65; }
+.interaction-status { min-height: 1.75em; color: var(--muted); font-size: 13px; margin: 10px 0; }
+.interaction-status[data-error="true"] { color: var(--ink); font-weight: 600; }
+.contact-form { max-width: 610px; margin-top: 24px; }
+.contact-form fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.contact-form legend { font-size: 16px; font-weight: 650; padding: 0; margin-bottom: 14px; }
+.contact-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.contact-form label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 15px; }
+.contact-form label span { color: var(--muted); font-weight: 400; }
+.contact-form input, .contact-form textarea { display: block; width: 100%; box-sizing: border-box; margin-top: 6px; padding: 9px 11px; font: inherit; font-size: 14px; line-height: 1.6; color: var(--ink); background: var(--background); border: 1px solid var(--button-border); border-radius: 4px; }
+.contact-form textarea { min-height: 145px; resize: vertical; }
+.contact-form input:focus-visible, .contact-form textarea:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.contact-form button { display: inline-flex; align-items: center; font: inherit; font-size: 13px; font-weight: 600; color: var(--blue); background: transparent; border: 1px solid var(--link-border); border-radius: 4px; padding: 8px 15px; cursor: pointer; }
+.contact-form button:hover:not(:disabled) { background: var(--button-hover); border-color: var(--button-hover-border); }
+.contact-form button:disabled { color: var(--disabled); border-color: var(--disabled-border); cursor: default; }
+.contact-form .contact-trap { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+#guestbook-comments { --waline-font-size: 14px; --waline-theme-color: var(--blue); --waline-active-color: var(--blue); --waline-color: var(--ink); --waline-white: var(--background); --waline-light-grey: var(--muted); --waline-dark-grey: var(--muted); --waline-bg-color: var(--background); --waline-bg-color-light: var(--surface); --waline-bg-color-hover: var(--button-hover); --waline-border-color: var(--button-border); --waline-info-color: var(--muted); --waline-info-bg-color: var(--surface); --waline-disable-bg-color: var(--surface); --waline-disable-color: var(--muted); --waline-bq-color: var(--surface); font-size: 14px; }
+#guestbook-comments .wl-panel { box-shadow: none; }
+@media (max-width: 650px) { .contact-fields { grid-template-columns: 1fr; gap: 0; } }
+@media print { .contact-form, #guestbook-comments, #guestbook .interaction-status { display: none; } }

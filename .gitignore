@@ -2,6 +2,14 @@
 # Review new files before adding an exact exception below.
 *
 !*/
+# Never traverse local materials or the separate private backend repository.
+/.tools/
+/services/
+/othermaterials/
+/legacy/
+/content/
+/scripts/
+/_site/
 !/.gitignore
 !/404.html
 !/73d58d94a2573508dc71b47f88ed91b4.txt
@@ -40,3 +48,6 @@
 !/notes/index.html
 !/robots.txt
 !/sitemap.xml
+!/assets/interactions-config.js
+!/assets/interactions.css
+!/assets/interactions.js
