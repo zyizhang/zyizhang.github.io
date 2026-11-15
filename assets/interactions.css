@@ -15,6 +15,7 @@
 .contact-form input, .contact-form textarea { display: block; width: 100%; box-sizing: border-box; margin-top: 6px; padding: 9px 11px; font: inherit; font-size: 14px; line-height: 1.6; color: var(--ink); background: var(--background); border: 1px solid var(--button-border); border-radius: 4px; }
 .contact-form textarea { min-height: 125px; resize: vertical; }
 .contact-form input:focus-visible, .contact-form textarea:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.contact-form [aria-invalid="true"] { border-color: var(--blue); }
 .contact-form button { display: inline-flex; align-items: center; font: inherit; font-size: 13px; font-weight: 600; color: var(--blue); background: transparent; border: 1px solid var(--link-border); border-radius: 4px; padding: 8px 15px; cursor: pointer; }
 .contact-form button:hover:not(:disabled) { background: var(--button-hover); border-color: var(--button-hover-border); }
 .contact-form button:disabled { color: var(--disabled); border-color: var(--disabled-border); cursor: default; }

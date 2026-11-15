@@ -92,7 +92,22 @@ if (form) {
   const endpoint = serviceUrl(interactionsConfig.contactEndpoint);
   let sending = false;
   let submissionId = null;
-  form.addEventListener('input', () => { if (!sending) submissionId = null; });
+  let invalidField = null;
+  form.addEventListener('input', event => {
+    if (!sending) submissionId = null;
+    if (event.target === invalidField) {
+      invalidField.removeAttribute('aria-invalid');
+      invalidField = null;
+      setStatus(status, '');
+    }
+  });
+  const showFieldError = (id, message) => {
+    invalidField?.removeAttribute('aria-invalid');
+    invalidField = document.getElementById(id);
+    invalidField.setAttribute('aria-invalid', 'true');
+    setStatus(status, message, true);
+    invalidField.focus();
+  };
   if (endpoint) {
     fields.disabled = false;
     setStatus(status, '');
@@ -101,20 +116,38 @@ if (form) {
   }
   form.addEventListener('submit', async event => {
     event.preventDefault();
-    if (sending || !endpoint || !form.reportValidity()) return;
+    if (sending || !endpoint) return;
     const data = new FormData(form);
-    submissionId ||= crypto.randomUUID();
     const payload = {
       name: String(data.get('name') || '').trim(),
       email: String(data.get('email') || '').trim(),
       message: String(data.get('message') || '').trim(),
       company_website: String(data.get('company_website') || ''),
-      submissionId,
     };
-    if (payload.message.length < 3) {
-      setStatus(status, 'Please write a message of at least 3 characters.', true);
+    // Use our own English validation instead of browser-localized popups.
+    if (payload.name.length > 80) {
+      showFieldError('contact-name', 'Please keep your name within 80 characters.');
       return;
     }
+    const emailInput = document.getElementById('contact-email');
+    if (payload.email && (emailInput.validity.typeMismatch
+      || payload.email.length > 254
+      || !/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(payload.email))) {
+      showFieldError('contact-email', 'Please enter a valid email address, or leave it blank.');
+      return;
+    }
+    if (payload.message.length < 3) {
+      showFieldError('contact-message', 'Please write a message of at least 3 characters.');
+      return;
+    }
+    if (payload.message.length > 4000) {
+      showFieldError('contact-message', 'Please keep your message within 4000 characters.');
+      return;
+    }
+    invalidField?.removeAttribute('aria-invalid');
+    invalidField = null;
+    submissionId ||= crypto.randomUUID();
+    payload.submissionId = submissionId;
     sending = true;
     button.disabled = true;
     button.textContent = 'Sending…';
