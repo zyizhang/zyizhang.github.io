@@ -12,6 +12,7 @@ A static academic homepage, published with GitHub Pages from the `master` branch
 - `assets/`: current CSS, theme and pagination JavaScript, publication thumbnails and link icons with attribution.
 - `assets/interactions-config.js`, `assets/interactions.js`, `assets/interactions.css`: Public Square message board. Configuration contains the public service URL only; credentials and backend source are kept separately.
 - `img/snowboarding.jpg`: current profile photo.
+- `favicon.svg`, `favicon.ico`: original blue-and-white ZZ monogram for browser tabs and bookmarks, with a scalable version and 16/32/48-pixel fallback icons.
 - `robots.txt`, `sitemap.xml`, `CNAME`: search and hosting configuration.
 - `google1ce0c4b82039fdff.html`: Google Search Console verification; keep this file and the homepage verification meta tag.
 - The root 32-character hexadecimal `.txt` file verifies IndexNow ownership.
