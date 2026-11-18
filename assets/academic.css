@@ -89,6 +89,8 @@ h3 { font-size: 16px; line-height: 1.5; margin: 21px 0 7px; }
 p { margin: 0 0 16px; }
 strong { font-weight: 650; }
 .contact-line { margin-top: 22px; }
+.contact-details { padding-top: 3px; font-size: 14px; line-height: 1.85; }
+.contact-details a { overflow-wrap: anywhere; }
 .section-note { color: var(--muted); font-size: 13px; }
 ul { padding-left: 21px; margin: 12px 0; }
 li { padding-left: 3px; margin-bottom: 10px; }
