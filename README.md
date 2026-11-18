@@ -10,6 +10,7 @@ A static academic homepage, published with GitHub Pages from the `master` branch
 
 - `index.html`: homepage, biography and research interests.
 - `assets/`: current CSS, theme and pagination JavaScript, publication thumbnails and link icons with attribution.
+- `assets/interactions-config.js`, `assets/interactions.js`, `assets/interactions.css`: Public Square, including public service URLs only.
 - `img/snowboarding.jpg`: current profile photo.
 - `favicon.svg`, `favicon.ico`: original blue-and-white ZZ monogram for browser tabs and bookmarks, with a scalable version and 16/32/48-pixel fallback icons.
 - `robots.txt`, `sitemap.xml`, `CNAME`: search and hosting configuration.
@@ -28,7 +29,7 @@ python -m http.server 8000 --bind 127.0.0.1
 
 Visit http://127.0.0.1:8000/ . Push reviewed changes to `master` to publish; check the repository's Pages build and deployment in GitHub Actions.
 
-Contact provides a direct email link. Public Square is currently offline, and its front-end files are kept locally for possible restoration. The private-message form and automatic comment email notifications remain withdrawn.
+Public Square is available at the end of the homepage for anonymous or named public messages, using a separate backend. Contact provides a direct email link. The private-message form and automatic comment email notifications remain withdrawn.
 
 Common former URLs redirect to the current homepage sections. The Google verification file remains available at its original root URL.
 

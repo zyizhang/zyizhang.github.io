@@ -50,6 +50,7 @@
 })();
 </script>
 <link rel="stylesheet" href="assets/academic.css">
+<link rel="stylesheet" href="assets/interactions.css">
 </head>
 <body><a class="skip" href="#about">Skip to content</a><div class="page">
 <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme" hidden><svg class="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg><svg class="theme-icon-light" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><span data-theme-label>Dark mode</span></button>
@@ -58,7 +59,7 @@
 <div class="portrait-frame"><img class="portrait" src="img/snowboarding.jpg" alt="Zhenyi Zhang in snowboarding gear with snowy mountains in the background" width="220" height="235"></div>
 <p class="location">Zurich, Switzerland</p>
 <div class="social"><a href="mailto:zhenyzhang@ethz.ch"><img class="link-icon" src="assets/icons/email.svg" alt="" aria-hidden="true" width="18" height="18"><span>Email</span></a><a href="https://scholar.google.com/citations?user=4vWJglYAAAAJ&amp;hl=en"><img class="link-icon" src="assets/icons/google-scholar.svg" alt="" aria-hidden="true" width="18" height="18"><span>Google Scholar</span></a><a href="https://github.com/zyizhang"><img class="link-icon" src="assets/icons/github.svg" alt="" aria-hidden="true" width="18" height="18"><span>GitHub</span></a><a href="https://space.igp.ethz.ch/people/person-detail.zheny-zhang.html"><img class="link-icon" src="assets/icons/eth.svg" alt="" aria-hidden="true" width="18" height="18"><span>ETH Profile</span></a><a href="https://orcid.org/0000-0002-8792-4497"><img class="link-icon" src="assets/icons/orcid.svg" alt="" aria-hidden="true" width="18" height="18"><span>ORCID</span></a><a href="https://www.researchgate.net/profile/Zhenyi-Zhang-5"><img class="link-icon" src="assets/icons/researchgate.svg" alt="" aria-hidden="true" width="18" height="18"><span>ResearchGate</span></a><a href="https://www.linkedin.com/in/zhenyi-zhang-b15719294/"><img class="link-icon" src="assets/icons/linkedin.svg" alt="" aria-hidden="true" width="18" height="18"><span>LinkedIn</span></a></div>
-<nav aria-label="Page sections"><a href="#about">About</a><a href="#research">Research</a><a href="#news">News</a><a href="#publications">Publications</a><a href="#service">Academic Service</a><a href="#awards">Honors & Awards</a><a href="#contact">Contact</a></nav>
+<nav aria-label="Page sections"><a href="#about">About</a><a href="#research">Research</a><a href="#news">News</a><a href="#publications">Publications</a><a href="#service">Academic Service</a><a href="#awards">Honors & Awards</a><a href="#contact">Contact</a><a href="#guestbook">Public Square</a></nav>
 </aside>
 <main>
 <section id="about"><p class="eyebrow">ETH ZURICH / SPACE GEODESY / GNSS / AI</p><h1>About Me</h1>
@@ -136,8 +137,19 @@
 <p><a href="mailto:zhenyzhang@ethz.ch">zhenyzhang@ethz.ch</a></p>
 </div>
 </section>
+<section id="guestbook" class="public-square">
+<h2>Public Square</h2>
+<div class="square-card">
+<p class="interaction-intro">You are welcome to leave a message about my research, share an idea, or simply say hello.</p>
+<p class="interaction-note">Messages are public and appear immediately. Add a display name or leave it blank to post as Anonymous.</p>
+<p id="guestbook-status" class="interaction-status" role="status" aria-live="polite">Loading messages...</p>
+<div id="guestbook-comments"></div>
+<noscript><p>Please enable JavaScript to view or leave messages.</p></noscript>
+</div>
+</section>
 <footer>© 2026 Zhenyi Zhang · <a href="#about">Back to top ↑</a></footer>
 </main></div>
 <script src="assets/academic.js" defer></script>
+<script type="module" src="assets/interactions.js"></script>
 <script data-goatcounter="https://zyizhang.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body></html>
